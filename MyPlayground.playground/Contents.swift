@@ -1,12 +1,5 @@
-//
-//  main.swift
-//  Shifty Sums
-//
-//  Puzzle description available at:
-//
-//  https://www.russellgordon.ca/incomplete-puzzles/shifty-sums.pdf
-//
-//  NOTE: Puzzle adapted from material provided by the University of Waterloo.
+import Foundation
+
 
 // Faking input
 let n = 12
