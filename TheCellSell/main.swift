@@ -1,18 +1,3 @@
-//
-//  main.swift
-//  TheCellSell
-//
-//  Puzzle description available at:
-//
-//  https://www.russellgordon.ca/incomplete-puzzles/the-cell-sell.pdf
-//
-//  NOTE: Puzzle adapted from material provided by the University of Waterloo.
-//
-//  Test your solution to the puzzle using this plan:
-//
-//  https://www.russellgordon.ca/incomplete-puzzles/test-plan-the-cell-sell.pdf
-//
-
 import Foundation
 
 print("The Cell Sell")
@@ -22,17 +7,16 @@ print("=============")
 
 // Get daytime minutes
 print("Number of daytime minutes?")
-let day = Int(readLine()!)!
+let day = 10
 
 // Get evening minutes
 print("Number of evening minutes?")
-let evening = Int(readLine()!)!
+let evening = 20
 
 // Get weekend minutes
 print("Number of weekend minutes?")
-let weekend = Int(readLine()!)!
+let weekend = 30
 
-// INPUT
 
 // PROCESS
 //
@@ -85,7 +69,7 @@ func compareCosts(day: Int, evening: Int, weekend: Int) -> String {
     if a > b {
         result += "Plan B is cheapest."
     } else if a == b {
-        result += "Plan A and B are the same price."
+        result += "Plans A and B are the same price."
     } else {
         result += "Plan A is cheapest."
     }

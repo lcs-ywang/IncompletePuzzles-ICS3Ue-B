@@ -1,88 +1,61 @@
+
+
 import Foundation
 
-print("The Cell Sell")
-print("=============")
+print("I Speak TXTMSG")
+print("==============")
 
 // INPUT
-
-// Get daytime minutes
-print("Number of daytime minutes?")
-let day = Int(readLine()!)!
-
-// Get evening minutes
-print("Number of evening minutes?")
-let evening = Int(readLine()!)!
-
-// Get weekend minutes
-print("Number of weekend minutes?")
-let weekend = Int(readLine()!)!
-
+// Ask for a phrase
+print("Enter phrase> ", terminator: "")
+let phrase = readLine()!
 
 // PROCESS
-//
-// NOTE: To unit test logic you have written, it must be encapsulated (described) within a function.
-//
-//       Write a function with:
-//
-//       1. a meaningful name
-//       2. parameters that describe the input required
-//            (in this case, three integers)
-//       3. an appropriate return type
-//            (in this case, a string describing what plan is least expensive)
-//
-func compareCosts(day: Int, evening: Int, weekend: Int) -> String {
+func translate(phrase shortForm: String) -> String {
+//parameters are the inputs to the function.
+//Parameters are seperated by the sommas
+//A parameter can have an external and internal name
+//In this case, "translate" has one parameter.
+//It's external name is "phrase"
+//It's nternel name is "short form"
+func translate(phrase shortForm: String) -> String {
+
+    // NOTE: Instead of an "if statement" consider using a different type of Swift structure to handle all the different possible cases...
     
-    // Calculate cost for plan A
-    var a = 0
-    
-    // Add daytime cost
-    if day > 100 {
-        a += (day - 100) * 25
+    switch shortForm {
+    case "CU" :
+        return "see you"
+    case ":-)" :
+        return "I’m happy"
+    case ":-(" :
+        return "I’m unhappy"
+    case ";-)" :
+        return "wink"
+    case ":-P" :
+        return "stick out my tongue"
+    case "(˜.˜)" :
+        return "sleepy"
+    case "TA" :
+        return "totally awesome"
+    case "CCC" :
+        return "Canadian Cheese Champion"
+    case "CUZ" :
+        return "because"
+    case "TY" :
+        return "thank-you"
+    case "YW" :
+        return "you’re welcome"
+    case "TTYL" :
+        return "talk to you later"
+    default:
+        return shortForm
     }
-    
-    // Add evening cost
-    a += evening * 15
-    
-    // Add weekend cost
-    a += weekend * 20
-    
-    // Calculate cost for plan B
-    var b = 0
-    
-    // Add daytime cost
-    if day > 250 {
-        b += (day - 250) * 45
-    }
-    
-    // Add evening cost
-    b += evening * 35
-    
-    // Add weekend cost
-    b += weekend * 25
-    
-    // Build the result to be returned
-    var result = ""
-    
-    result += "Plan A costs \(a)\n"
-    result += "Plan B costs \(b)\n"
-    
-    if a > b {
-        result += "Plan B is cheapest."
-    } else if a == b {
-        result += "Plans A and B are the same price."
-    } else {
-        result += "Plan A is cheapest."
-    }
-    
-    // Return the result
-    return result
-    
+
+
 }
 
 // OUTPUT
-//
-// Invoke the new function to get result and print it to the screen
-let output = compareCosts(day: day,
-                          evening: evening,
-                          weekend: weekend)
+let output = translate(phrase: phrase)
 print(output)
+
+} 
