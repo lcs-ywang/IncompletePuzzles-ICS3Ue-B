@@ -7,15 +7,14 @@ print("=============")
 
 // Get daytime minutes
 print("Number of daytime minutes?")
-let day = 10
-
+let day = Int.collectInput(withPrompt: "Days?", minimum: 0, maximum: nil)
 // Get evening minutes
 print("Number of evening minutes?")
-let evening = 20
+let evening = Int.collectInput(withPrompt: "Evening?", minimum: 0, maximum: nil)
 
 // Get weekend minutes
 print("Number of weekend minutes?")
-let weekend = 30
+let weekend = Int.collectInput(withPrompt: "Weekend?", minimum: 0, maximum: nil)
 
 
 // PROCESS
