@@ -16,18 +16,21 @@ print("=======")
 // INPUT
 
 // Get tine length
-print("Enter tine length:")
-print("   ", terminator: "")
-let t = Int.collectInput(withPrompt: "T? ", minimum: 0, maximum: nil)
+
+
+let t = Int.collectInput(withPrompt: "Enter tine length: ", minimum: 0, maximum: nil)
+print("", terminator: "")
 
 // Get tine spacing
-print("Enter tine spacing:")
-print("   ", terminator: "")
-let s = Int.collectInput(withPrompt: "S? ", minimum: 0, maximum: nil)
 
-print("Enter handle length:")
-print("   ", terminator: "")
-let h = Int.collectInput(withPrompt: "H? ", minimum: 0, maximum: nil)
+let s = Int.collectInput(withPrompt: "Enter tine spacing: ", minimum: 0, maximum: nil)
+print("", terminator: "")
+
+
+let h = Int.collectInput(withPrompt: "Enter handle length: ", minimum: 0, maximum: nil)
+print("", terminator: "")
+
+
 // OUTPUT
 
 ////Draw one time
