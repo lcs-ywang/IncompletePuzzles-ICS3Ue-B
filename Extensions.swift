@@ -8,7 +8,7 @@
 import Foundation
 
 extension Int {
-    static func collectInput(withPrompt prompt: String, minimum: Int?, maximum: Int?) -> Int {
+    static func collectInput(withPrompt prompt: String, minimum: Double?, maximum: Double?) -> Double {
         
         // Loop until a valid value is provided
         while true {
@@ -21,16 +21,16 @@ extension Int {
                 continue
             }
             
-            // Convert to an integer
-            guard let givenInteger = Int(givenInput) else {
+            // Convert to a Double
+            guard let givenDouble = Double(givenInput) else {
                 continue
             }
             
-            // If a lowest value for the integer was specified...
+            // If a lowest value for the Double was specified...
             if let minimumValue = minimum {
                 
                 // ... then check that the given integer is greater than or equal to the lowest desired value.
-                guard givenInteger >= minimumValue else {
+                guard givenDouble >= minimumValue else {
                     continue
                 }
                 
@@ -40,7 +40,7 @@ extension Int {
             if let maximumValue = maximum {
                 
                 // ... then check that the given integer is less than or equal to the highest desired value.
-                guard givenInteger <= maximumValue else {
+                guard givenDouble <= maximumValue else {
                     continue
                 }
                 
@@ -48,7 +48,7 @@ extension Int {
             }
             
             // If we've made it past all the checks, the input is an integer in the desired range of values, so, return it
-            return givenInteger
+            return givenDouble
             
         }
         

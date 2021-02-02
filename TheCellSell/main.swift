@@ -66,11 +66,11 @@ func compareCosts(day: Int, evening: Int, weekend: Int) -> String {
     result += "Plan B costs \(b)\n"
     
     if a > b {
-        result += "Plan B is cheapest."
+        result += "Plan B is cheaper."
     } else if a == b {
         result += "Plans A and B are the same price."
     } else {
-        result += "Plan A is cheapest."
+        result += "Plan A is cheaper."
     }
     
     // Return the result
