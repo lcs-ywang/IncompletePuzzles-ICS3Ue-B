@@ -50,7 +50,6 @@ func divisorCount(of givenNumber: Int) -> Int {
 // How many divisors does a number have?
 var rsa = [Int]()
 for i in lower...upper{
-    // Making sure that the code does not kill itselef
     if i > 2{
         if 4 == divisorCount(of: i){
             rsa.append(i)
