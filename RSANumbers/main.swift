@@ -7,29 +7,20 @@
 //  https://www.russellgordon.ca/incomplete-puzzles/rsa-numbers.pdf
 //
 //  NOTE: Puzzle adapted from material provided by the University of Waterloo.
-//
-//  Test your solution to the puzzle using this plan:
-//
-//  https://www.russellgordon.ca/incomplete-puzzles/test-plan-rsa-numbers.pdf
-//
-
 import Foundation
 
 print("RSA Numbers")
 print("===========")
 
 // INPUT
-
 // Get lower limit of range
 print("Enter lower limit of range")
-let lower = Int(readLine()!)!
-
-// Get upper limit of range
+var lower = Int(readLine()!)!
 print("Enter upper limit of range")
-let upper = Int(readLine()!)!
+var upper = Int(readLine()!)!
+
 
 // PROCESS
-
 // Count the number of divisors in the given Number
 func divisorCount(of givenNumber: Int) -> Int {
     
@@ -43,11 +34,10 @@ func divisorCount(of givenNumber: Int) -> Int {
         let remainder = givenNumber % i
         
         // DEBUG output...
-        print("\(givenNumber) \\ \(i) has a remainder of \(remainder)")
-        
+//        print("\(givenNumber) \\ \(i) has a remainder of \(remainder)")
         // TODO: Add some code here... we need to keep track of how many divisors there are
         if remainder == 0 {
-            
+            divisorCount += 1
         }
         
     }
@@ -58,4 +48,15 @@ func divisorCount(of givenNumber: Int) -> Int {
 }
 
 // How many divisors does a number have?
-print("5 has this many divisors... \(divisorCount(of: 5))")
+var rsa = [Int]()
+for i in lower...upper{
+    // Making sure that the code does not kill itselef
+    if i > 2{
+        if 4 == divisorCount(of: i){
+            rsa.append(i)
+        }
+    }
+}
+
+print("The number of RSA numbers between \(lower) and \(upper) is \(String(rsa.count))")
+

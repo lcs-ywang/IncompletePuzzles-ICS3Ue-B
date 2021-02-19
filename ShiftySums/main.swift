@@ -9,8 +9,8 @@
 //  NOTE: Puzzle adapted from material provided by the University of Waterloo.
 
 // Faking input
-let n = 12
-let k = 4
+let n =  Int.collectInput(withPrompt: "The value of n?", minimum: 0, maximum: nil)
+let k =  Int.collectInput(withPrompt: "The value of k?", minimum: 0, maximum: nil)
 
 //put this logic in a function
 func shift (n:Int, k: Int) -> Int {
@@ -28,14 +28,15 @@ func shift(n:Int) -> Int {
         var toAdd = n
         //multiply by 10 "i" times
         for _ in 1...i {
-            toAdd += 10
+            toAdd *= 10
         }
         output += toAdd
     }
     return output
 }
 
-print(shift(n: 7 ))
+let output = shift(n: n, k: k)
+print (output)
 //concrete logic (spelling it out)
 //output += n * 10
 //output += n * 10 * 10

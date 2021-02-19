@@ -7,11 +7,9 @@ print("==============")
 
 // INPUT
 // Ask for a phrase
-print("Enter phrase> ", terminator: "")
-let phrase = readLine()!
-
+let phrase = String.collectInput(withPrompt : "Enter phrase> ", acceptableValues: nil)
 // PROCESS
-func translate(phrase shortForm: String) -> String {
+
 //parameters are the inputs to the function.
 //Parameters are seperated by the sommas
 //A parameter can have an external and internal name
@@ -58,4 +56,4 @@ func translate(phrase shortForm: String) -> String {
 let output = translate(phrase: phrase)
 print(output)
 
-} 
+
